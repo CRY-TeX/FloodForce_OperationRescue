@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/Amita/Amita-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Aclonica/Aclonica-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/BackButton.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 38
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.231373, 0.231373, 0.231373, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.560784, 0.560784, 0.560784, 1 )
+
+[node name="HowToPlay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 596.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = -1.0
+margin_top = 17.0
+margin_right = 1025.0
+margin_bottom = 57.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_left = 411.0
+margin_right = 615.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 1 )
+text = "How to Play"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_left = -1.0
+margin_top = 111.0
+margin_right = 1021.0
+margin_bottom = 491.0
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+margin_left = 2.0
+margin_top = 524.0
+margin_right = 1024.0
+margin_bottom = 581.0
+
+[node name="Back" type="Button" parent="CenterContainer3"]
+margin_left = 427.0
+margin_top = 19.0
+margin_right = 594.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Back to Main Menu"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="CenterContainer3/Back" to="CenterContainer3/Back" method="_on_Back_pressed"]
