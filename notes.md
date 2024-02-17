@@ -10,6 +10,7 @@ Jump and Run with Car to escape flood wave
 
 - maybe dropping sand sacks to prevent water streams
 - jump over trees
+- collect survivors with key
 
 # 2. Stage
 
