@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+trail_divisor = 8
+emission_shape = 2
+emission_box_extents = Vector3( 850, 1, 1 )
+flag_disable_z = true
+direction = Vector3( -1, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1200.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.5
+color = Color( 0.227451, 0.396078, 0.576471, 1 )
+
+[node name="RainParticles" type="Particles2D"]
+position = Vector2( 863, -61 )
+amount = 1200
+lifetime = 0.8
+process_material = SubResource( 1 )

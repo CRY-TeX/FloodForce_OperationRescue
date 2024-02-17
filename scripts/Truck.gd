@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Truck
+
 const GRAVITY = 4200
 const JUMP_FORCE = -1000
 

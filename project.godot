@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Person",
+"language": "GDScript",
+"path": "res://scripts/Person.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Truck",
+"language": "GDScript",
+"path": "res://scripts/Truck.gd"
+} ]
+_global_script_class_icons={
+"Person": "",
+"Truck": ""
+}
+
 [application]
 
 config/name="Flood Force: Operation Rescue"
