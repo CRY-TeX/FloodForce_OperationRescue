@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Truck",
 "language": "GDScript",
 "path": "res://scripts/Truck.gd"
+}, {
+"base": "Node2D",
+"class": "Water",
+"language": "GDScript",
+"path": "res://scripts/Water.gd"
 } ]
 _global_script_class_icons={
 "Person": "",
-"Truck": ""
+"Truck": "",
+"Water": ""
 }
 
 [application]
