@@ -4,7 +4,7 @@ const PLAYER_START_POS = Vector2(130, 546)
 const CAMERA_START_POS = Vector2(512, 300)
 
 const START_SPEED = 10.0
-const MAX_SPEED = 35.0
+const MAX_SPEED = 25.0
 const SPEED_MODIFIER = 5000.0
 
 onready var Player = $Truck
