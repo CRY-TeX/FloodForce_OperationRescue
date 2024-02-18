@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fonts/Amita/Amita-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Aclonica/Aclonica-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/BackButton.gd" type="Script" id=3]
+[ext_resource path="res://images/main-menu-bg.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 38
@@ -21,15 +22,24 @@ bg_color = Color( 0.560784, 0.560784, 0.560784, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Main-menu-bg" type="Sprite" parent="."]
+position = Vector2( 530.5, 299.5 )
+scale = Vector2( 1.059, 1.10926 )
+texture = ExtResource( 4 )
+
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1024.0
-margin_bottom = 596.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -410.0
+margin_top = 72.0
+margin_right = 411.0
+margin_bottom = 487.0
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_left = -1.0
-margin_top = 17.0
+margin_top = 65.0
 margin_right = 1025.0
-margin_bottom = 57.0
+margin_bottom = 140.0
 
 [node name="Label" type="Label" parent="CenterContainer"]
 margin_left = 411.0
@@ -38,11 +48,34 @@ margin_bottom = 75.0
 custom_fonts/font = SubResource( 1 )
 text = "How to Play"
 
-[node name="CenterContainer2" type="CenterContainer" parent="."]
-margin_left = -1.0
-margin_top = 111.0
-margin_right = 1021.0
-margin_bottom = 491.0
+[node name="Container" type="HFlowContainer" parent="."]
+margin_left = 115.0
+margin_top = 135.0
+margin_right = 908.0
+margin_bottom = 463.0
+
+[node name="Label" type="Label" parent="Container"]
+margin_right = 788.0
+margin_bottom = 320.0
+text = "Welcome to \"Flood Force: Operation Rescue\". This is a game with the background to bring attention to the recent flood
+catastrophes in Germany. As this problem will only grow with the ongoing climate change it always helps to keep this topic
+present.
+
+Now to the rules of this game.
+
+1. Stage
+The first stage is about picking as many survivors up as possible without running into obstacles. Therefore jumping is
+required using the <space> bar.
+If you should run into an obstacle without having rescued anyone then the game is over. Else we move on to the 2nd stage.
+
+2. Stage
+The flood has taken over now and to complete the rescue we are forced to use the lifeboat in order to get to the save
+hospital. The problem is that the water is unsettled and waves start spreading. These water masses are a risk for our
+passengers. In order to not loose any of them we need to keep the boat as steady as possible on the waves.
+Therefore we can use the <a> key to balance left and the <d> key to balance right.
+
+
+Good luck and have fun!"
 
 [node name="CenterContainer3" type="CenterContainer" parent="."]
 margin_left = 2.0

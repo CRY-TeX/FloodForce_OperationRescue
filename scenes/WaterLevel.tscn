@@ -1,21 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/WaterLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/LifeBoat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/TruckBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Water.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Hospital.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/RainParticles.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/TruckHUD.tscn" type="PackedScene" id=7]
 
 [node name="WaterLevel" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="LifeBoat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 98, 442 )
+position = Vector2( 178, 442 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 511, 299 )
 current = true
 
 [node name="TruckBackground" parent="." instance=ExtResource( 3 )]
-visible = false
 
 [node name="Water" parent="." instance=ExtResource( 4 )]
+
+[node name="Hospital" parent="." instance=ExtResource( 5 )]
+position = Vector2( 822, 299 )
+
+[node name="RainParticles" parent="." instance=ExtResource( 6 )]
+
+[node name="TruckHUD" parent="." instance=ExtResource( 7 )]

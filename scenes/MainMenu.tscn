@@ -87,5 +87,6 @@ custom_styles/normal = SubResource( 4 )
 text = "Quit"
 script = ExtResource( 4 )
 
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="CenterContainer/VBoxContainer/HowToPlay" method="_on_Play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HowToPlay" to="CenterContainer/VBoxContainer/HowToPlay" method="_on_HowToPlay_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="CenterContainer/VBoxContainer/Quit" method="_on_Quit_pressed"]

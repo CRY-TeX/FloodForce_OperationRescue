@@ -25,7 +25,6 @@ var Person = preload("res://scenes/Person.tscn")
 var speed: float
 var distance: float
 var screen_size: Vector2
-var score: int = 0
 var obstacle_scenes = [
 	BrokenTreeScene,
 	CarBrokenEngineScene,
@@ -58,6 +57,7 @@ func _physics_process(_delta):
 
 # Function to start a new game.
 func new_game():
+	Globals.persons_rescued = 0
 	distance = 0.0
 	Player.position = PLAYER_START_POS
 	Player.velocity = Vector2(0, 0)
@@ -102,13 +102,20 @@ func remove_obstacles():
 
 func _on_obstacle_body_entered(body: Node):
 	if body is Truck:
-		new_game()
+		var next_scene = "res://scenes/GameOver.tscn"
+		if Globals.persons_rescued > 0:
+			next_scene = "res://scenes/WaterLevel.tscn"			
+
+		var status = get_tree().change_scene(next_scene)
+
+		if status != OK:
+			print("Error changing scene. Status: ", status)
 
 
 func _on_SpawnTimer_timeout():
 	var person_spawned = false
 
-	if randi() % 12 == 0:
+	if randi() % 8 == 0:
 		var person = Person.instance()
 		person.position = calc_obstacle_spawn_position(person)
 		person.connect("body_entered", self, "_on_person_body_entered", [person])
@@ -124,8 +131,8 @@ func _on_SpawnTimer_timeout():
 func _on_person_body_entered(body: Node, person: Node):
 	if not body is Truck: return
 
-	score += 1
-	TruckHUD.get_node("Score").text = str(score)
+	Globals.persons_rescued += 1
+	TruckHUD.get_node("Score").text = str(Globals.persons_rescued)
 	var index = persons.find(person)
 	if index != -1:
 		persons.remove(index)
