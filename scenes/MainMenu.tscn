@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://images/main-menu-bg.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Amita/Amita-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/Aclonica/Aclonica-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://scripts/QuitButton.gd" type="Script" id=4]
-[ext_resource path="res://scripts/HowToPlayButton.gd" type="Script" id=5]
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 38
@@ -23,6 +22,7 @@ bg_color = Color( 0.560784, 0.560784, 0.560784, 1 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 
 [node name="Main-menu-bg" type="Sprite" parent="."]
 position = Vector2( 533, 298 )
@@ -74,7 +74,6 @@ custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "How To Play"
-script = ExtResource( 5 )
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 58.0
@@ -85,8 +84,7 @@ custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Quit"
-script = ExtResource( 4 )
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="CenterContainer/VBoxContainer/HowToPlay" method="_on_Play_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HowToPlay" to="CenterContainer/VBoxContainer/HowToPlay" method="_on_HowToPlay_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="CenterContainer/VBoxContainer/Quit" method="_on_Quit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

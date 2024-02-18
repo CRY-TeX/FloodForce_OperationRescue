@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_cartoon_pluck_rubber_band_jump_ascending_fast_003_69414.mp3-3ce376b9f677f0979a3bddf3e8cdaf7d.mp3str"
+
+[deps]
+
+source_file="res://sounds/zapsplat_cartoon_pluck_rubber_band_jump_ascending_fast_003_69414.mp3"
+dest_files=[ "res://.import/zapsplat_cartoon_pluck_rubber_band_jump_ascending_fast_003_69414.mp3-3ce376b9f677f0979a3bddf3e8cdaf7d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

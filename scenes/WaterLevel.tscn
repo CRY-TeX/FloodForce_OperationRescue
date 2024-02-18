@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/WaterLevel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/LifeBoat.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Hospital.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/RainParticles.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/TruckHUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sounds/retro-falling-down.mp3" type="AudioStream" id=8]
 
 [node name="WaterLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,3 +29,6 @@ position = Vector2( 822, 299 )
 [node name="RainParticles" parent="." instance=ExtResource( 6 )]
 
 [node name="TruckHUD" parent="." instance=ExtResource( 7 )]
+
+[node name="FallingPersonPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )

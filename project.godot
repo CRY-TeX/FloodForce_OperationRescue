@@ -44,6 +44,7 @@ run/main_scene="res://scenes/MainMenu.tscn"
 [autoload]
 
 Globals="*res://scripts/globals.gd"
+SoundPlayer="*res://scenes/SoundPlayer.tscn"
 
 [display]
 

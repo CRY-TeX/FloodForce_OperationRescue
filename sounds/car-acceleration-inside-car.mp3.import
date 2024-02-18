@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/car-acceleration-inside-car.mp3-905ec5c47ad44acf4e0e388c876f3918.mp3str"
+
+[deps]
+
+source_file="res://sounds/car-acceleration-inside-car.mp3"
+dest_files=[ "res://.import/car-acceleration-inside-car.mp3-905ec5c47ad44acf4e0e388c876f3918.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

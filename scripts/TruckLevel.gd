@@ -14,6 +14,7 @@ onready var RainParticles = $RainParticles
 onready var ObstacleSpawnTimer = $ObstacleSpawnTimer
 onready var SpawnTimer = $SpawnTimer
 onready var TruckHUD = $TruckHUD
+onready var PersonPickupPlayer = $PersonPickupPlayer
 
 var BrokenTreeScene = preload("res://scenes/BrokenTree.tscn")
 var CarBrokenEngineScene = preload("res://scenes/CarBrokenEngine.tscn")
@@ -38,6 +39,7 @@ var persons = []
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	SoundPlayer.play_rain()
 	randomize()
 	new_game()
 
@@ -132,6 +134,7 @@ func _on_person_body_entered(body: Node, person: Node):
 	if not body is Truck: return
 
 	Globals.persons_rescued += 1
+	PersonPickupPlayer.play()
 	TruckHUD.get_node("Score").text = str(Globals.persons_rescued)
 	var index = persons.find(person)
 	if index != -1:

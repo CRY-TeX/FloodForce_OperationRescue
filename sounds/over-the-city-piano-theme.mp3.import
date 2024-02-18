@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/over-the-city-piano-theme.mp3-d10fa6e636d8b11cac9c402690313dc6.mp3str"
+
+[deps]
+
+source_file="res://sounds/over-the-city-piano-theme.mp3"
+dest_files=[ "res://.import/over-the-city-piano-theme.mp3-d10fa6e636d8b11cac9c402690313dc6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

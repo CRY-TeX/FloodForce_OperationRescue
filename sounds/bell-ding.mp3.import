@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bell-ding.mp3-a2e910447662f354b06bf78ef25b35bf.mp3str"
+
+[deps]
+
+source_file="res://sounds/bell-ding.mp3"
+dest_files=[ "res://.import/bell-ding.mp3-a2e910447662f354b06bf78ef25b35bf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -7,6 +7,8 @@ onready var LifeBoat = $LifeBoat
 onready var Water = $Water
 onready var Hospital = $Hospital
 onready var TruckHUD = $TruckHUD
+onready var RainParticles = $RainParticles
+onready var FallingPersonPlayer = $FallingPersonPlayer
 
 const MIN_WATER_LEVEL = 480.0
 const MAX_WATER_LEVEL = 350.0
@@ -14,7 +16,7 @@ const LEVEL_LENGTH = 1024.0 * 8.0
 const LIFEBOAT_SPEED = 200.0
 const ROTATION_MODIFIER = 0.08
 const MAX_ROTATION = 1.0
-const FALL_OFF_ROTATION = 0.80
+const FALL_OFF_ROTATION = 0.7
 
 var points: Array = []
 var current_point: int = 0
@@ -78,14 +80,16 @@ func person_fall_off():
 			add_child(person_instance)
 
 			Globals.persons_rescued -= 1
+			FallingPersonPlayer.play()
 			TruckHUD.get_node("Score").text = str(Globals.persons_rescued)
-			if Globals.persons_rescued < 0:
-				Globals.persons_rescued = 0
-				var status = get_tree().change_scene("res://scenes/GameOver.tscn")
 
-				if status != OK:
-					print("Error changing scene. Status: ", status)
 
+	if Globals.persons_rescued < 0:
+		Globals.persons_rescued = 0
+		var status = get_tree().change_scene("res://scenes/GameOver.tscn")
+
+		if status != OK:
+			print("Error changing scene. Status: ", status)
 
 func move_and_free_falling_persons(delta):
 	var falling_person_indexes = []
@@ -128,6 +132,7 @@ func rotate_lifeboat_on_wave():
 func move_lifeboat(delta):
 	Camera.position.x += LIFEBOAT_SPEED * delta
 	LifeBoat.position.x += LIFEBOAT_SPEED * delta
+	RainParticles.position.x += LIFEBOAT_SPEED * delta
 
 	# set the height of the boat to the water level
 	if LifeBoat.position.x > points[current_point].x:
@@ -139,6 +144,7 @@ func move_lifeboat(delta):
 
 
 func _on_Hospital_body_entered(_body):
+	SoundPlayer.play_reach_hospital()
 	var status = get_tree().change_scene("res://scenes/WinScreen.tscn")
 
 	if status != OK:

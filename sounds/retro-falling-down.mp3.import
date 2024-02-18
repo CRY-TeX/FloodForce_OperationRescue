@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/retro-falling-down.mp3-a7f2255fc21d72bb1727832da075dd87.mp3str"
+
+[deps]
+
+source_file="res://sounds/retro-falling-down.mp3"
+dest_files=[ "res://.import/retro-falling-down.mp3-a7f2255fc21d72bb1727832da075dd87.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

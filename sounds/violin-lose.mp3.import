@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/violin-lose.mp3-e481fbb10a7e77f96cebbc995d7dd65b.mp3str"
+
+[deps]
+
+source_file="res://sounds/violin-lose.mp3"
+dest_files=[ "res://.import/violin-lose.mp3-e481fbb10a7e77f96cebbc995d7dd65b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

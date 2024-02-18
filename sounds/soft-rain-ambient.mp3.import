@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/soft-rain-ambient.mp3-0c72f3f48a095bea5c9e6d1fd8feba05.mp3str"
+
+[deps]
+
+source_file="res://sounds/soft-rain-ambient.mp3"
+dest_files=[ "res://.import/soft-rain-ambient.mp3-0c72f3f48a095bea5c9e6d1fd8feba05.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
