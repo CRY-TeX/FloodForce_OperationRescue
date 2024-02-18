@@ -72,7 +72,7 @@ If you should run into an obstacle without having rescued anyone then the game i
 The flood has taken over now and to complete the rescue we are forced to use the lifeboat in order to get to the save
 hospital. The problem is that the water is unsettled and waves start spreading. These water masses are a risk for our
 passengers. In order to not loose any of them we need to keep the boat as steady as possible on the waves.
-Therefore we can use the <a> key to balance left and the <d> key to balance right.
+Therefore we can use the <ArrowLeft> key to balance left and the <ArrowRight> key to balance right.
 
 
 Good luck and have fun!"
